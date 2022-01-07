@@ -1,11 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import {
-  Container,
-  Stack,
-  Heading,
-  Text,
-} from '@chakra-ui/react'
+import { Container, Stack, Heading, Text } from '@chakra-ui/react'
 
 const Home: NextPage = () => {
   return (
@@ -18,9 +13,7 @@ const Home: NextPage = () => {
 
       <Container>
         <Stack>
-          <Heading>
-            Welcome to Worm Farm!
-          </Heading>
+          <Heading>Welcome to Worm Farm!</Heading>
           <Text>
             So apparently... Charlie is a cat. A really good cat you see.
           </Text>

@@ -1,7 +1,7 @@
-import React from "react"
-import type { Thing } from "../types"
+import React from 'react'
+import type { Thing } from '../types'
 import { Heading, Stack, UnorderedList } from '@chakra-ui/react'
-import { ThingListItem } from "./ThingLIstItem"
+import { ThingListItem } from './ThingListItem'
 
 export interface ThingListProps {
   things: Array<Thing>
@@ -12,13 +12,12 @@ export function ThingList(props: ThingListProps) {
   return (
     <Stack>
       <Heading>Hello! Woah.</Heading>
-      
+
       <UnorderedList>
-        {things.map(thing => (
+        {things.map((thing) => (
           <ThingListItem key={thing.id} thing={thing} />
         ))}
       </UnorderedList>
     </Stack>
   )
 }
-

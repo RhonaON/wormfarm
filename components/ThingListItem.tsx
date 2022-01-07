@@ -1,7 +1,6 @@
-import React from "react"
-import type { Thing } from "../types"
+import React from 'react'
+import type { Thing } from '../types'
 import { Stack, ListItem, Text } from '@chakra-ui/react'
-
 
 export interface ThingListItemProps {
   thing: Thing
@@ -19,4 +18,3 @@ export function ThingListItem(props: ThingListItemProps) {
     </ListItem>
   )
 }
-
