@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { VStack, StackDivider } from '@chakra-ui/react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 

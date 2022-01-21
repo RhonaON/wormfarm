@@ -1,0 +1,17 @@
+type Query {
+  getThing(id: ID!): Thing
+}
+
+type Mutation {
+  createThing(input: ThingInput): Thing
+  updateThing(id: ID!, input: ThingInput): Thing
+}
+
+input ThingInput {
+  name: String
+}
+
+type Thing {
+  id: ID!
+  name: String
+}
