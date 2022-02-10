@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { Container, Stack, Heading, Text } from '@chakra-ui/react'
+
+import { Head } from '../../components/Head'
 import { ThingList } from '../../components/ThingList'
 import type { Thing } from '../../types'
 
@@ -14,11 +15,7 @@ const things: Array<Thing> = [
 const Things: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Worm Farm</title>
-        <meta name="description" content="A happy place for happy worms" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head />
 
       <Container>
         <ThingList things={things} />
