@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Thing } from '../types'
+import type { Thing } from 'graphql-let/__generated__/__types__'
 import { Stack, ListItem, Text } from '@chakra-ui/react'
 
 export interface ThingListItemProps {

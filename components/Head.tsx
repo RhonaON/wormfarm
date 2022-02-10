@@ -5,7 +5,7 @@ interface HeadProps {}
 export function Head(props: HeadProps) {
   return (
     <NextHead>
-      <title>Worm Farm</title>
+      <title>WormFarm</title>
       <meta name="description" content="A happy place for happy worms" />
       <link rel="icon" href="/favicon.ico" />
       <link

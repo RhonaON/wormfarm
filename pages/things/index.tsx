@@ -1,24 +1,26 @@
 import type { NextPage } from 'next'
 import { Container, Stack, Heading, Text } from '@chakra-ui/react'
+import { load } from 'graphql-let'
 
 import { Head } from '../../components/Head'
 import { ThingList } from '../../components/ThingList'
-import type { Thing } from '../../types'
 
-const things: Array<Thing> = [
-  { id: 1, name: 'Charlie' },
-  { id: 2, name: 'a ghost' },
-  { id: 3, name: 'Mrs Hoo-Hoo' },
-  { id: 4, name: 'you' },
-]
+const { useThingsViewerQuery } = load('../../graphql/ThingsViewer.graphql')
 
 const Things: NextPage = () => {
+  const thingsViewerQuery = useThingsViewerQuery()
+
+  const { loading, error, data } = thingsViewerQuery
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error! {error.message}</div>
+  if (data == null || data.things == null) return null
+
   return (
     <>
       <Head />
 
       <Container>
-        <ThingList things={things} />
+        <ThingList things={data.things} />
       </Container>
     </>
   )

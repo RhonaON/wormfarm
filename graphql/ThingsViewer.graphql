@@ -1,0 +1,6 @@
+query ThingsViewer {
+  things {
+    id
+    name
+  }
+}

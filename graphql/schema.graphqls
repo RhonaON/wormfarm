@@ -1,5 +1,6 @@
 type Query {
-  getThing(id: ID!): Thing
+  things: [Thing!]
+  thing(id: ID!): Thing!
 }
 
 type Mutation {

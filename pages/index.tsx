@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 
       <Container>
         <Stack>
-          <Heading>Welcome to Worm Farm!</Heading>
+          <Heading>Welcome to WormFarm!</Heading>
           <Text>
             So apparently... Charlie is a cat. A really good cat you see.
           </Text>
